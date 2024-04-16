@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "01300360-1167-474c-af39-d185c5883a73",
+		"name": "Person Data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14433627"
+	},
+	"item": [
+		{
+			"name": "Create Person",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"lastName\": \"Kovács\",\r\n  \"firstName\": \"János\",\r\n  \"birthName\": \"Kovács János\",\r\n  \"motherName\": \"Nagy Anna\",\r\n  \"gender\": \"férfi\",\r\n  \"citizenship\": \"magyar\",\r\n  \"residenceAddress\": {\r\n    \"zipcode\": \"11111\",\r\n    \"city\": \"Budapest\",\r\n    \"street\": \"Példa utca 1.\"\r\n  },\r\n  \"mailingAddress\": {\r\n    \"zipcode\": \"22222\",\r\n    \"city\": \"Debrecen\",\r\n    \"street\": \"Minta utca 2.\"\r\n  },\r\n  \"currentAddress\": {\r\n    \"zipcode\": \"3333\",\r\n    \"city\": \"Szeged\",\r\n    \"street\": \"\"\r\n  },\r\n  \"phoneNumber\": \"06-20-123-4567\",\r\n  \"taxNumber\": \"12345678901\",\r\n  \"notes\": \"Ez egy teszt megjegyzés.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/persons/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/persons/"
+			},
+			"response": []
+		},
+		{
+			"name": "Update to Béla",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"lastName\": \"Béla\",\r\n  \"firstName\": \"János\",\r\n  \"birthName\": \"Kovács János\",\r\n  \"motherName\": \"Nagy Anna\",\r\n  \"gender\": \"férfi\",\r\n  \"citizenship\": \"magyar\",\r\n  \"residenceAddress\": {\r\n    \"zipcode\": \"1111\",\r\n    \"city\": \"Budapest\",\r\n    \"street\": \"Példa utca 1.\"\r\n  },\r\n  \"mailingAddress\": {\r\n    \"zipcode\": \"221223322\",\r\n    \"city\": \"Debrecen\",\r\n    \"street\": \"Minta utca 2.\"\r\n  },\r\n  \"currentAddress\": {\r\n    \"zipcode\": \"3333\",\r\n    \"city\": \"Szeged\",\r\n    \"street\": \"\"\r\n  },\r\n  \"phoneNumber\": \"06-20-123-4567\",\r\n  \"taxNumber\": \"1234567890\",\r\n  \"notes\": \"Ez egy teszt megjegyzés.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/persons/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get person by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/persons/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete person by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/api/persons/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Wrong tax number ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"lastName\": \"Szabó\",\r\n  \"firstName\": \"Eszter\",\r\n  \"birthName\": \"Szabó Eszter\",\r\n  \"motherName\": \"Tóth Ilona\",\r\n  \"gender\": \"nő\",\r\n  \"citizenship\": \"magyar\",\r\n  \"residenceAddress\": {\r\n    \"zipcode\": \"4400\",\r\n    \"city\": \"Nyíregyháza\",\r\n    \"street\": \"Kossuth utca 15.\"\r\n  },\r\n  \"mailingAddress\": {\r\n    \"zipcode\": \"7100\",\r\n    \"city\": \"Székesfehérvár\",\r\n    \"street\": \"Rákóczi út 8.\"\r\n  },\r\n  \"currentAddress\": {\r\n    \"zipcode\": \"7624\",\r\n    \"city\": \"Pécs\",\r\n    \"street\": \"Hunyadi János utca 10.\"\r\n  },\r\n  \"phoneNumber\": \"06-30-987-6543\",\r\n  \"taxNumber\": \"987654321\",\r\n  \"notes\": \"Ez egy minta megjegyzés.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/persons/"
+			},
+			"response": []
+		}
+	]
+}
